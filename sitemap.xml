@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- [PH] trocar PH-DOMINIO pelo domínio real antes de publicar -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://farlo.online/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://farlo.online/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farlo.online/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://farlo.online/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://farlo.online/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farlo.online/en/index.html"/>
+  </url>
+  <url>
+    <loc>https://farlo.online/pacotes.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://farlo.online/pacotes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farlo.online/en/packages.html"/>
+  </url>
+  <url>
+    <loc>https://farlo.online/en/packages.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://farlo.online/pacotes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farlo.online/en/packages.html"/>
+  </url>
+  <url>
+    <loc>https://farlo.online/contato.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://farlo.online/contato.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farlo.online/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://farlo.online/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://farlo.online/contato.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farlo.online/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://farlo.online/residencia-3d/index.html</loc>
+  </url>
+</urlset>

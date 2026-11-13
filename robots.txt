@@ -1,0 +1,5 @@
+# [PH] trocar PH-DOMINIO pelo domínio real antes de publicar
+User-agent: *
+Allow: /
+
+Sitemap: https://farlo.online/sitemap.xml
