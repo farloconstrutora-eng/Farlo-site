@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; media-src 'self'; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Residência Modelo 3D — protótipo FARLO</title>
+<meta name="description" content="Protótipo de residência 3D interativa para sites de construtoras: explore os pavimentos, o entorno e troque os acabamentos.">
+<meta name="theme-color" content="#101316">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="top__home" href="../index.html" aria-label="FARLO, voltar ao site"><img class="top__logo" src="logo.svg" width="120" height="30" alt="FARLO"></a>
+  <a class="top__back" href="../index.html#residencia">← Voltar ao site</a><span class="badge">Protótipo · modelo de demonstração</span>
+</header>
+
+<div class="layout">
+  <main class="stage" id="stage">
+    <canvas id="c" tabindex="0" aria-label="Modelo 3D de uma residência. Arraste para girar, role ou pince para aproximar, use as setas do teclado para girar."></canvas>
+    <p class="hint" id="hint">Arraste para girar · role para aproximar</p>
+    <div class="loading" id="loading">Montando a residência…</div>
+    <div class="nowebgl" id="nowebgl" hidden>
+      <p><strong>Seu navegador não abriu o 3D.</strong></p>
+      <p>Neste caso o site mostraria fotos e plantas da casa no lugar do modelo.</p>
+    </div>
+  </main>
+
+  <aside class="panel" aria-label="Controles da casa">
+    <h1 class="panel__title">Residência Modelo</h1>
+    <p class="panel__specs">≈ 230 m² · 2 pavimentos · 2 suítes · piscina e garagem</p>
+
+    <section class="group" aria-labelledby="g-view">
+      <h2 id="g-view">Ponto de vista</h2>
+      <div class="seg" data-group="view" role="group" aria-labelledby="g-view">
+        <button type="button" data-value="fachada" aria-pressed="true">Fachada</button>
+        <button type="button" data-value="aerea" aria-pressed="false">Aérea</button>
+        <button type="button" data-value="terreo" aria-pressed="false">Térreo</button>
+        <button type="button" data-value="superior" aria-pressed="false">Superior</button>
+      </div>
+    </section>
+
+    <section class="group" aria-labelledby="g-time">
+      <h2 id="g-time">Horário</h2>
+      <div class="seg" data-group="time" role="group" aria-labelledby="g-time">
+        <button type="button" data-value="dia" aria-pressed="true">Dia</button>
+        <button type="button" data-value="noite" aria-pressed="false">Noite</button>
+      </div>
+    </section>
+
+    <section class="group" aria-labelledby="g-wall">
+      <h2 id="g-wall">Fachada</h2>
+      <div class="chips" data-group="wall" role="group" aria-labelledby="g-wall"></div>
+    </section>
+
+    <section class="group" aria-labelledby="g-wood">
+      <h2 id="g-wood">Madeira</h2>
+      <div class="chips" data-group="wood" role="group" aria-labelledby="g-wood"></div>
+    </section>
+
+    <section class="group" aria-labelledby="g-stone">
+      <h2 id="g-stone">Pedra</h2>
+      <div class="chips" data-group="stone" role="group" aria-labelledby="g-stone"></div>
+    </section>
+
+    <section class="group" aria-labelledby="g-floor">
+      <h2 id="g-floor">Piso interno</h2>
+      <div class="chips" data-group="floor" role="group" aria-labelledby="g-floor"></div>
+    </section>
+
+    <a class="cta" id="cta" href="https://wa.me/?text=" target="_blank" rel="noopener noreferrer">Tenho interesse nesta residência</a>
+    <p class="note" id="note">Protótipo de teste de peso e desempenho. Medidas, planta e acabamentos são ilustrativos.</p>
+    <p class="stats" id="stats" aria-live="off"></p>
+  </aside>
+</div>
+
+<script src="js/three.min.js"></script>
+<script src="js/GLTFLoader.js"></script>
+<script src="js/RGBELoader.js"></script>
+<script src="js/casa.js"></script>
+</body>
+</html>

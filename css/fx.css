@@ -1,0 +1,20 @@
+/* FARLO — css/fx.css (etapa 3). Só estilos de peças criadas pelos efeitos GSAP (js/fx/*):
+   sem JS, sem GSAP ou com movimento reduzido esses elementos não existem e nada aqui se aplica. */
+.fx-curtain {
+  position: fixed; inset: 0; z-index: calc(var(--z-loader) + 1); pointer-events: none;
+  background: var(--c-950); clip-path: inset(100% 0 0 0);
+}
+.fx-progress {
+  position: fixed; left: 0; top: 0; z-index: calc(var(--z-header) + 2); width: 100%; height: 2px;
+  background: var(--lime); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none;
+}
+.fx-cursor-label {
+  position: fixed; left: 0; top: 0; z-index: calc(var(--z-cursor) + 1); pointer-events: none;
+  color: var(--on-accent); font-size: var(--fs-2xs); font-weight: 600; line-height: 1;
+  letter-spacing: var(--tracking-overline); text-transform: uppercase; white-space: nowrap;
+  opacity: 0; visibility: hidden;
+}
+.fx-on .cursor { transition: opacity var(--t-base) var(--ease), background-color var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease); }
+.fx-on .cursor.is-view { background: var(--lime); box-shadow: none; }
+/* (a correção de clique do carrossel 3D, G-01, agora vive em main.css) */
+@media (prefers-reduced-motion: reduce) { .fx-curtain, .fx-progress, .fx-cursor-label { display: none !important; } }

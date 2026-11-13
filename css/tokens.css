@@ -1,0 +1,79 @@
+﻿/* Tokens de design do FARLO (de .site-build/01-reverso/tokens.json).
+   Componente nenhum usa cor fixa: tudo vem daqui. */
+:root {
+  /* cor */
+  --c-950: #07090b;          /* loader */
+  --c-900: #101316;          /* fundo (preto-tinta) */
+  --c-800: #171b1f;          /* superfície 1 */
+  --c-700: #20262b;          /* superfície 2 */
+  --c-600: #2c343a;          /* superfície 3, trilhos */
+  --text: #f2f4f5;          /* branco (branco-osso) */
+  --muted: #a9b3ba;
+  --faint: #7f8b93;          /* só em 900/800; em 700/600 só ≥ 24px */
+  --on-accent: var(--c-900);
+  --lime: #ffb400;           /* ação e estado */
+  --lime-strong: #ffc933;
+  --cyan: #ff7a1a;           /* neons: luz e ênfase */
+  --magenta: #c9d1d6;
+  --violet: #7d8b96;
+  --border: rgb(255 255 255 / .10);
+  --overlay-label: color-mix(in srgb, var(--c-900) 65%, transparent);
+  --focus: var(--lime);
+
+  /* tipografia */
+  --font-body: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-display: var(--font-body);
+  --fs-2xs: .64rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.266rem;
+  --fs-xl: 1.424rem;
+  --fs-2xl: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
+  --fs-3xl: clamp(2.2rem, 1.4rem + 3.2vw, 4rem);
+  --fs-display: clamp(3rem, 1.6rem + 6vw, 7.5rem);
+  --fs-mega: clamp(4.5rem, 2rem + 14vw, 18rem);
+  --lh-base: 1.5rem;
+  --lh-lg: 1.75rem;
+  --lh-xl: 2rem;
+  --lh-display: .95;
+  --tracking-overline: .1em;
+  --tracking-display: -.035em;
+
+  /* espaço */
+  --unit-chrome: calc(100vw / 1536);
+  --header-inset: calc(100vw / 1536 * 50);
+  --section: clamp(3.5rem, 1.5rem + 4.5vw, 5.5rem);
+  --gutter: clamp(1.25rem, .75rem + 2.5vw, 3rem);
+  --content-max: 90rem;
+  --header-h: 4.5rem;
+
+  /* forma */
+  --radius: .375rem;
+  --radius-pill: 999px;
+  --blur: blur(4px) saturate(180%);
+
+  /* movimento */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --ease-expo-out: cubic-bezier(.16, 1, .3, 1);
+  --t-fast: .15s;
+  --t-base: .3s;
+  --t-fade: 1s;
+
+  /* carrossel */
+  --carousel-ratio: 16 / 10;
+  --carousel-card: 55vw;
+  --carousel-card-mobile: 84vw;
+  --carousel-perspective: 1400px;
+
+  /* cursor */
+  --cursor-size: 10px;
+  --cursor-size-hover: 44px;
+
+  /* camadas */
+  --z-content: 10;
+  --z-header: 30;
+  --z-panel: 31;
+  --z-cursor: 40;
+  --z-loader: 50;
+}
+
+
