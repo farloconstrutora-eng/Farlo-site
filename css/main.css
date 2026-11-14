@@ -594,3 +594,25 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .residence__media img { display: block; width: 100%; height: auto; transition: transform .6s ease; }
 @media (hover: hover) { .residence__media:hover img { transform: scale(1.03); } }
 @media (min-width: 60rem) { .residence__grid { grid-template-columns: 1fr 1.15fr; gap: 4rem; } }
+
+/* ---------- pacotes: navegação interna e automações ---------- */
+.page-nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.75rem; }
+.page-nav .chip3d { text-decoration: none; display: inline-flex; align-items: center; font: inherit; font-size: .85rem; font-weight: 600; color: var(--muted); background: var(--c-800); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: .45rem 1rem; min-height: 2.25rem; }
+.page-nav .chip3d:hover { color: var(--lime); border-color: var(--lime); }
+.packs-page > .container > h2 { margin-bottom: 1.5rem; }
+.automations { border-top: 1px solid var(--border); scroll-margin-top: var(--header-h); }
+#sites { scroll-margin-top: var(--header-h); }
+.auto__sub, .homeauto__text { max-width: 40rem; margin-top: 1rem; color: var(--muted); }
+.crm { display: grid; gap: 2rem; margin-top: 2.5rem; padding: 1.75rem; border-top: 2px solid var(--lime); }
+.crm__title { font-size: var(--fs-2xl); line-height: 1.1; font-weight: 600; margin: .75rem 0 1rem; letter-spacing: -.02em; }
+.crm__flow { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-top: 1.5rem; padding: 0; list-style: none; }
+.crm__flow li { font-size: .8rem; font-weight: 600; padding: .4rem .8rem; border: 1px solid var(--border); border-radius: var(--radius-pill); color: var(--text); background: var(--c-700); }
+.crm__flow li + li::before { content: "→"; margin-right: .6rem; color: var(--lime); font-weight: 400; }
+.crm__flow li:last-child { background: var(--lime); border-color: var(--lime); color: var(--on-accent); }
+.crm__flow li:last-child::before { color: var(--on-accent); }
+.auto__small-title { margin-top: 3.5rem; }
+.auto__small-text { max-width: 36rem; margin-top: .5rem; }
+.automations .services__list { margin-top: 1.5rem; }
+.homeauto__list { margin-top: 2rem; }
+@media (min-width: 60rem) { .crm { grid-template-columns: 1fr 1fr; gap: 3rem; padding: 2.5rem; align-items: center; } }
+@media (min-width: 48rem) { .homeauto__list { grid-template-columns: repeat(2, 1fr); } }

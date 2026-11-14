@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; media-src 'self'; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FARLO — Websites for construction companies</title>
-<meta name="description" content="FARLO builds websites for construction companies, developers and engineering firms: your projects well presented and quote requests straight to WhatsApp.">
+<title>FARLO — 3D websites for businesses</title>
+<meta name="description" content="FARLO builds websites with 3D visualization for any business: show your product, space or development and get quote requests straight to WhatsApp.">
 
 <meta name="theme-color" content="#101316">
 <meta name="color-scheme" content="dark">
@@ -16,17 +16,19 @@
 <link rel="alternate" hreflang="x-default" href="https://farlo.online/index.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FARLO">
-<meta property="og:title" content="FARLO — Websites for construction companies">
-<meta property="og:description" content="FARLO builds websites for construction companies, developers and engineering firms: your projects well presented and quote requests straight to WhatsApp.">
+<meta property="og:title" content="FARLO — 3D websites for businesses">
+<meta property="og:description" content="FARLO builds websites with 3D visualization for any business: show your product, space or development and get quote requests straight to WhatsApp.">
 <meta property="og:url" content="https://farlo.online/en/index.html">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://farlo.online/assets/img/og/og-farlo.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/img/logo/favicon-64.png" type="image/png" sizes="64x64"><link rel="apple-touch-icon" href="../assets/img/logo/apple-touch-icon.png">
 <script src="../js/boot.js"></script>
 <link rel="stylesheet" href="../css/tokens.css">
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/fx.css">
+<link rel="stylesheet" href="../css/home3d.css">
+<link rel="stylesheet" href="../css/home3d.css">
 <script defer src="../js/layout.js"></script>
 <script defer src="../js/content.js"></script>
 <script defer src="../js/vendor/gsap.min.js"></script>
@@ -45,50 +47,92 @@
 <script defer src="../js/fx/split.js"></script>
 <script defer src="../js/fx/hero.js"></script>
 <script defer src="../js/fx/process.js"></script>
+<script defer src="../js/home3d.js"></script>
+<script defer src="../js/home3d.js"></script>
 <script defer src="../js/main.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"FARLO","description":"FARLO builds websites for construction companies, developers and engineering firms: your projects well presented and quote requests straight to WhatsApp.","inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"FARLO","description":"FARLO builds websites with 3D visualization for any business: show your product, space or development and get quote requests straight to WhatsApp.","inLanguage":"en"}</script>
 </head>
 <body data-page="home" data-lang="en" data-root="../">
 <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 <div class="loader" role="progressbar" aria-label="FARLO" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="loader__mark">FARLO</span><span class="loader__count" data-loader-count>000</span></div>
 <header class="site-header fade-in-on-ready" id="site-header">
   <div class="site-header__inner">
-    <a class="brand" href="index.html" aria-label="FARLO, go to home" data-i18n-attr="aria-label:brand.home"><img class="brand__logo" src="../assets/img/logo/farlo-logo.svg" width="128" height="32" alt=""><span class="brand__tag" data-i18n="brand.tag">Websites for construction companies</span></a>
+    <a class="brand" href="index.html" aria-label="FARLO, go to home" data-i18n-attr="aria-label:brand.home"><img class="brand__logo" src="../assets/img/logo/farlo-logo.png" width="138" height="32" alt=""><span class="brand__tag" data-i18n="brand.tag">3D websites for businesses</span></a>
     <nav class="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.aria"><ul class="site-nav__list"><li><a class="roll" href="index.html" data-i18n="nav.home" aria-current="page"><span class="roll__a">Home</span><span class="roll__b" aria-hidden="true">Home</span></a></li><li><a class="roll" href="packages.html" data-i18n="nav.packages"><span class="roll__a">Packages</span><span class="roll__b" aria-hidden="true">Packages</span></a></li><li><a class="roll" href="contact.html" data-i18n="nav.contact"><span class="roll__a">Contact</span><span class="roll__b" aria-hidden="true">Contact</span></a></li></ul></nav>
     <div class="site-header__tools">
       <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.aria"><a class="lang__link" lang="pt-BR" hreflang="pt-BR" href="../index.html" data-lang-switch="pt" aria-label="Português">PT</a><a class="lang__link" lang="en" hreflang="en" href="index.html" data-lang-switch="en" aria-label="English" aria-current="true">EN</a></div>
-      <a class="btn btn--wa btn--sm btn--header" href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20construction%20company." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="wa.label">WhatsApp</span></a>
+      <a class="btn btn--wa btn--sm btn--header" href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="wa.label">WhatsApp</span></a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle><span class="menu-btn__open" data-i18n="nav.menu">Menu</span><span class="menu-btn__close" data-i18n="nav.close">Close</span></button>
     </div>
   </div>
 </header>
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Navigation menu" data-i18n-attr="aria-label:nav.panel" hidden>
   <nav class="menu__nav" aria-label="Main" data-i18n-attr="aria-label:nav.aria"><ul class="menu__list"><li><a href="index.html" data-i18n="nav.home" aria-current="page">Home</a></li><li><a href="packages.html" data-i18n="nav.packages">Packages</a></li><li><a href="contact.html" data-i18n="nav.contact">Contact</a></li></ul></nav>
-  <div class="menu__foot"><div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.aria"><a class="lang__link" lang="pt-BR" hreflang="pt-BR" href="../index.html" data-lang-switch="pt" aria-label="Português">PT</a><a class="lang__link" lang="en" hreflang="en" href="index.html" data-lang-switch="en" aria-label="English" aria-current="true">EN</a></div><a class="btn btn--wa " href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20construction%20company." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="wa.label">WhatsApp</span></a></div>
+  <div class="menu__foot"><div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.aria"><a class="lang__link" lang="pt-BR" hreflang="pt-BR" href="../index.html" data-lang-switch="pt" aria-label="Português">PT</a><a class="lang__link" lang="en" hreflang="en" href="index.html" data-lang-switch="en" aria-label="English" aria-current="true">EN</a></div><a class="btn btn--wa " href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="wa.label">WhatsApp</span></a></div>
 </div>
 <div id="smooth-wrapper" data-fx="smooth">
 <div id="smooth-content">
 <main id="main" tabindex="-1">
-<section class="hero" id="hero" aria-labelledby="hero-title">
+<section class="hero hero--3d" id="hero" aria-labelledby="hero-title">
   <div class="hero__glow" aria-hidden="true"></div>
-  <div class="container hero__top">
-    <h1 class="display hero__title" id="hero-title" data-fx="split" data-fx-type="lines,chars" data-fx-stagger=".03" data-i18n="hero.title">Your projects presented the way they deserve. More quote requests on WhatsApp.</h1>
-    <p class="t-lg hero__sub" data-i18n="hero.sub">Websites for construction companies, developers and engineering firms, built to open fast on a phone and take the client straight to a chat with your team.</p>
-    <div class="hero__actions"><a class="btn btn--wa btn--lg" href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20construction%20company." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria" data-fx="magnetic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="hero.cta">Talk on WhatsApp</span></a><a class="link-arrow" href="packages.html"><span data-i18n="hero.link">See packages</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    <div class="hero__logo" aria-hidden="true" data-fx="reveal"><img src="../assets/img/logo/farlo-logo.svg" width="192" height="48" alt=""></div>
+  <div class="container hero__top hero__grid">
+    <div class="hero__copy">
+      <h1 class="display hero__title" id="hero-title" data-fx="split" data-fx-type="lines,chars" data-fx-stagger=".03" data-i18n="hero.title">Your business in 3D on your site. More clients on WhatsApp.</h1>
+      <p class="t-lg hero__sub" data-i18n="hero.sub">Fast 3D websites for any business. Clients explore what you sell and message your team directly.</p>
+      <div class="hero__actions"><a class="btn btn--wa btn--lg" href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria" data-fx="magnetic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="hero.cta">Talk on WhatsApp</span></a><a class="link-arrow" href="packages.html"><span data-i18n="hero.link">See packages</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+    <div class="hero__stage" data-hero3d data-three="../js/vendor/three.min.js">
+      <div class="hero__fallback" aria-hidden="true"><img src="../assets/img/logo/farlo-logo-stacked.png" width="997" height="510" alt=""></div>
+      <canvas class="hero__canvas" tabindex="0" role="img" aria-label="Interactive 3D model. Drag to rotate." data-i18n-attr="aria-label:hero.3d.aria"></canvas>
+      <div class="hero__chips" role="group" aria-label="Pick an example" data-i18n-attr="aria-label:hero.3d.group">
+        <button type="button" class="chip3d" data-shape="house" aria-pressed="true" data-i18n="hero.3d.house">Property</button>
+        <button type="button" class="chip3d" data-shape="product" aria-pressed="false" data-i18n="hero.3d.product">Product</button>
+        <button type="button" class="chip3d" data-shape="space" aria-pressed="false" data-i18n="hero.3d.space">Space</button>
+      </div>
+      <p class="hero__hint" aria-hidden="true" data-i18n="hero.3d.hint">Drag to rotate</p>
+    </div>
   </div>
 </section>
 
-<div class="strip" aria-hidden="true"><div class="strip__track"><span class="strip__item" data-i18n="strip.1">Residential</span><span class="strip__item" data-i18n="strip.2">Commercial</span><span class="strip__item" data-i18n="strip.3">Development</span><span class="strip__item" data-i18n="strip.4">Renovation</span><span class="strip__item" data-i18n="strip.5">Industrial</span><span class="strip__item" data-i18n="strip.6">Infrastructure</span><span class="strip__item" data-i18n="strip.7">Foundations</span><span class="strip__item" data-i18n="strip.8">Design</span><span class="strip__item" data-i18n="strip.1">Residential</span><span class="strip__item" data-i18n="strip.2">Commercial</span><span class="strip__item" data-i18n="strip.3">Development</span><span class="strip__item" data-i18n="strip.4">Renovation</span><span class="strip__item" data-i18n="strip.5">Industrial</span><span class="strip__item" data-i18n="strip.6">Infrastructure</span><span class="strip__item" data-i18n="strip.7">Foundations</span><span class="strip__item" data-i18n="strip.8">Design</span></div></div>
+<div class="strip" aria-hidden="true"><div class="strip__track"><span class="strip__item" data-i18n="strip.1">Property</span><span class="strip__item" data-i18n="strip.2">Products</span><span class="strip__item" data-i18n="strip.3">Stores</span><span class="strip__item" data-i18n="strip.4">Services</span><span class="strip__item" data-i18n="strip.5">Industry</span><span class="strip__item" data-i18n="strip.6">Health &amp; beauty</span><span class="strip__item" data-i18n="strip.7">Events</span><span class="strip__item" data-i18n="strip.8">Brands</span><span class="strip__item" data-i18n="strip.1">Property</span><span class="strip__item" data-i18n="strip.2">Products</span><span class="strip__item" data-i18n="strip.3">Stores</span><span class="strip__item" data-i18n="strip.4">Services</span><span class="strip__item" data-i18n="strip.5">Industry</span><span class="strip__item" data-i18n="strip.6">Health &amp; beauty</span><span class="strip__item" data-i18n="strip.7">Events</span><span class="strip__item" data-i18n="strip.8">Brands</span></div></div>
+
+<section class="section niches" id="niches" aria-labelledby="niches-title">
+  <div class="container">
+    <p class="overline" data-i18n="niches.label">3D for any business</p>
+    <h2 class="t-3xl" id="niches-title" data-fx="reveal" data-i18n="niches.title">What you sell, the client explores.</h2>
+    <ul class="niches__list" role="list" data-fx="reveal-batch" data-fx-stagger=".08">
+      <li class="panel niche"><svg class="niche__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11 12 4l8.5 7M5.5 9.7V20h13V9.7M10 20v-5h4v5" /></svg><h3 class="panel__title" data-i18n="niches.1.title">Property and developments</h3><p class="muted" data-i18n="niches.1.text">The client rotates it, swaps finishes and sees it by day and night.</p></li>
+      <li class="panel niche"><svg class="niche__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7.2v9.6L12 21l8-4.2V7.2zM4 7.2l8 4.3 8-4.3M12 11.5V21" /></svg><h3 class="panel__title" data-i18n="niches.2.title">Products</h3><p class="muted" data-i18n="niches.2.text">Every angle before buying.</p></li>
+      <li class="panel niche"><svg class="niche__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5 5.5 4h13L20 9.5M4 9.5h16M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0M5.5 12.5V20h13v-7.5M10 20v-4.5h4V20" /></svg><h3 class="panel__title" data-i18n="niches.3.title">Spaces and stores</h3><p class="muted" data-i18n="niches.3.text">A tour that brings the client to you.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section demo3d" id="residencia" aria-labelledby="res-title">
+  <div class="container">
+    <div class="demo3d__head">
+      <div><p class="overline" data-i18n="res.label">Interactive demo</p><h2 class="t-3xl" id="res-title" data-fx="reveal" data-i18n="res.title">Try the 3D now</h2></div>
+      <p class="t-lg demo3d__text" data-i18n="res.text">A demo house: rotate it, switch floors, facade and flooring, see it by day or night. On your site, your product or space takes its place.</p>
+    </div>
+    <div class="demo3d__frame" data-embed-3d>
+      <img class="demo3d__poster" src="../assets/img/residencia-3d.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Two-storey house with a pool as an interactive 3D model" data-i18n-attr="alt:res.alt">
+      <div class="demo3d__veil">
+        <a class="btn btn--wa btn--lg" href="../residencia-3d/index.html" data-embed-activate data-src="../residencia-3d/index.html?embed=1" data-title="Interactive 3D demo residence"><span class="btn__text" data-i18n="res.cta">Start the interactive 3D</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p class="demo3d__hint" data-i18n="res.hint">The model only loads when you ask for it.</p>
+      </div>
+    </div>
+    <p class="demo3d__foot"><a class="link-arrow" href="../residencia-3d/index.html"><span data-i18n="res.full">Open full screen</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="muted" data-i18n="res.note">Add-on on request. Works on phone and desktop.</span></p>
+  </div>
+</section>
 
 <section class="section problem" id="problem" aria-labelledby="problem-title">
   <div class="container">
     <p class="overline" data-i18n="problem.label">The problem</p>
-    <h2 class="t-3xl problem__title" id="problem-title" data-fx="reveal" data-i18n="problem.title">Great construction deserves a showcase to match.</h2>
+    <h2 class="t-3xl problem__title" id="problem-title" data-fx="reveal" data-i18n="problem.title">People who search decide in seconds.</h2>
     <ul class="problem__list" role="list" data-fx="reveal-batch" data-fx-stagger=".08">
-      <li class="panel"><h3 class="panel__title" data-i18n="problem.1.title">Your projects stay hidden</h3><p class="muted" data-i18n="problem.1.text">People who want to build search before they call. Without a website, finished projects live in a PDF or loose Instagram photos. A website shows your track record at once.</p></li>
-      <li class="panel"><h3 class="panel__title" data-i18n="problem.2.title">Quotes arrive incomplete</h3><p class="muted" data-i18n="problem.2.text">A message with no type of work, no floor area, no city. On a website, the client already says what they need and your team starts the proposal faster.</p></li>
-      <li class="panel"><h3 class="panel__title" data-i18n="problem.3.title">There is no proof of trust</h3><p class="muted" data-i18n="problem.3.text">Hiring a builder is a big decision. A website with your projects, your team and how you work builds confidence before the first meeting.</p></li>
+      <li class="panel"><h3 class="panel__title" data-i18n="problem.1.title">Your work stays hidden</h3><p class="muted" data-i18n="problem.1.text">Without a website, everything sits in loose Instagram photos. A website shows it all at once.</p></li>
+      <li class="panel"><h3 class="panel__title" data-i18n="problem.2.title">Contacts arrive incomplete</h3><p class="muted" data-i18n="problem.2.text">On a website, the client already says what they need and your team replies faster.</p></li>
+      <li class="panel"><h3 class="panel__title" data-i18n="problem.3.title">Nothing catches the eye</h3><p class="muted" data-i18n="problem.3.text">Everyone has still photos. A 3D the client rotates makes your business memorable.</p></li>
     </ul>
   </div>
 </section>
@@ -96,7 +140,7 @@
 <section class="section manifesto" id="manifesto" aria-labelledby="manifesto-label">
   <div class="container manifesto__grid">
     <h2 class="overline" id="manifesto-label" data-i18n="manifesto.label">About us</h2>
-    <p class="t-2xl manifesto__text" data-fx="split" data-fx-type="words" data-fx-mode="scrub" data-i18n="manifesto.text">FARLO is a two-partner company that builds websites for construction and engineering companies. One handles the conversation and the briefing, the other the production. You talk to people who know that construction sells on trust, and get a site that shows your work and takes the client straight to your WhatsApp.</p>
+    <p class="t-2xl manifesto__text" data-fx="split" data-fx-type="words" data-fx-mode="scrub" data-i18n="manifesto.text">FARLO builds websites with 3D and automations. You talk to people who understand marketing and paid traffic, and get a site that makes your business stand out and takes the client straight to your WhatsApp.</p>
   </div>
 </section>
 
@@ -105,24 +149,24 @@
     <p class="overline" data-i18n="services.label">What we deliver</p>
     <h2 class="t-3xl" id="services-title" data-fx="reveal" data-i18n="services.title">A website that works for you</h2>
     <ul class="services__list" role="list" data-fx="reveal-batch" data-fx-stagger=".08">
-      <li class="service"><h3 class="service__title" data-i18n="services.1.title">Your projects up front</h3><p class="muted" data-i18n="services.1.text">A gallery of finished and ongoing projects, organized by type (residential, commercial, industrial, renovation) so the client quickly sees what you build.</p></li>
-      <li class="service"><h3 class="service__title" data-i18n="services.2.title">Quotes on WhatsApp</h3><p class="muted" data-i18n="services.2.text">A WhatsApp button on every screen, with a ready message so the client just taps and sends, and your sales team replies.</p></li>
-      <li class="service"><h3 class="service__title" data-i18n="services.3.title">Made for the phone</h3><p class="muted" data-i18n="services.3.text">Clients and site engineers browse on their phones. The site opens light and reads well on a small screen, even on a weak signal.</p></li>
-      <li class="service"><h3 class="service__title" data-i18n="services.4.title">Your company address</h3><p class="muted" data-i18n="services.4.text">The domain is registered in your company's name. The site is yours, take it wherever you want.</p></li>
+      <li class="service"><h3 class="service__title" data-i18n="services.1.title">Your work up front</h3><p class="muted" data-i18n="services.1.text">Projects, products or services organized so the client gets it fast.</p></li>
+      <li class="service"><h3 class="service__title" data-i18n="services.2.title">Quotes on WhatsApp</h3><p class="muted" data-i18n="services.2.text">A WhatsApp button on every screen, with a ready message to send.</p></li>
+      <li class="service"><h3 class="service__title" data-i18n="services.3.title">Made for the phone</h3><p class="muted" data-i18n="services.3.text">Opens light and reads well on a phone, even on a weak signal.</p></li>
+      <li class="service"><h3 class="service__title" data-i18n="services.4.title">Your company address</h3><p class="muted" data-i18n="services.4.text">The domain is in your company's name. The site is yours.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section residence" id="residencia" aria-labelledby="res-title">
-  <div class="container residence__grid">
-    <div class="residence__copy">
-      <p class="overline" data-i18n="res.label">3D residence</p>
-      <h2 class="t-3xl" id="res-title" data-fx="reveal" data-i18n="res.title">Your development in 3D, right on the site</h2>
-      <p class="t-lg residence__text" data-i18n="res.text">Visitors rotate the house, switch floors, swap facade, wood, stone and flooring, and view it by day or night. All in the browser, nothing to install. This is a demo house; yours takes its place.</p>
-      <p class="residence__note muted" data-i18n="res.note">Add-on on request (price to be confirmed). Works on phone and desktop.</p>
-      <p><a class="btn btn--wa" href="../residencia-3d/index.html"><span class="btn__text" data-i18n="res.cta">Open the 3D residence</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-    </div>
-    <a class="residence__media" href="../residencia-3d/index.html" data-cursor="view" tabindex="-1" aria-hidden="true"><img src="../assets/img/residencia-3d.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="Two-storey house with a pool as an interactive 3D model"></a>
+<section class="section homeauto" id="automacoes-home" aria-labelledby="homeauto-title">
+  <div class="container">
+    <p class="overline" data-i18n="homeauto.label">Automations</p>
+    <h2 class="t-3xl" id="homeauto-title" data-fx="reveal" data-i18n="homeauto.title">Your customer service on autopilot</h2>
+    <p class="t-lg homeauto__text" data-i18n="homeauto.text">CRM and small automations that capture, reply to and follow up on contacts for you.</p>
+    <ul class="niches__list homeauto__list" role="list" data-fx="reveal-batch" data-fx-stagger=".08">
+      <li class="panel niche"><h3 class="panel__title" data-i18n="crm.title">Automated CRM</h3><p class="muted" data-i18n="homeauto.1.text">Every contact becomes a client in the pipeline, with a team alert and automatic follow-up.</p></li>
+      <li class="panel niche"><h3 class="panel__title" data-i18n="small.title">Smaller automations</h3><p class="muted" data-i18n="homeauto.2.text">WhatsApp, spreadsheets, reminders and reports, one piece at a time.</p></li>
+    </ul>
+    <p class="packs__more"><a class="link-arrow" href="packages.html#automacoes"><span data-i18n="homeauto.link">See automations</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
   </div>
 </section>
 
@@ -131,8 +175,8 @@
     <p class="overline" data-i18n="packs.label">Packages</p>
     <h2 class="t-3xl" id="packs-title" data-fx="reveal" data-i18n="packs.title">Three ways to start</h2>
     <ul class="pack-grid" role="list" data-fx="reveal-batch" data-fx-stagger=".08">
-      <li class="panel pack-sum"><h3 class="panel__title" data-i18n="pack.e.name">Essential</h3><p class="muted" data-i18n="pack.e.sum">One complete page with your projects and your WhatsApp.</p></li>
-      <li class="panel pack-sum"><h3 class="panel__title" data-i18n="pack.s.name">Builder</h3><p class="muted" data-i18n="pack.s.sum">The Essential, plus 3 add-ons of your choice.</p></li>
+      <li class="panel pack-sum"><h3 class="panel__title" data-i18n="pack.e.name">Essential</h3><p class="muted" data-i18n="pack.e.sum">One complete page with your work and your WhatsApp.</p></li>
+      <li class="panel pack-sum"><h3 class="panel__title" data-i18n="pack.s.name">Complete</h3><p class="muted" data-i18n="pack.s.sum">The Essential, plus 3 add-ons of your choice.</p></li>
       <li class="panel pack-sum"><h3 class="panel__title" data-i18n="pack.a.name">Corporate</h3><p class="muted" data-i18n="pack.a.sum">Fully customized, with video and more features.</p></li>
     </ul>
     <p class="packs__more"><a class="link-arrow" href="packages.html"><span data-i18n="packs.more">See packages and prices</span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
@@ -146,11 +190,11 @@
     <div class="process__body">
       <svg class="process__line" viewBox="0 0 100 2" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="process__line-bg" d="M0 1H100" pathLength="1"/><path class="process__line-fg" d="M0 1H100" pathLength="1" data-fx="progress" data-fx-trigger=".process"/></svg>
       <ol class="process__steps" role="list">
-        <li class="step is-active"><span class="step__n">01</span><h3 class="step__title" data-i18n="process.s1">Talk</h3><p class="muted" data-i18n="process.d1">You tell us how the company works, the types of projects and what you want clients to do on the site.</p></li>
-        <li class="step"><span class="step__n">02</span><h3 class="step__title" data-i18n="process.s2">Material</h3><p class="muted" data-i18n="process.d2">You send photos of your projects, short texts and the company contacts. The timeline starts here.</p></li>
-        <li class="step"><span class="step__n">03</span><h3 class="step__title" data-i18n="process.s3">Build</h3><p class="muted" data-i18n="process.d3">We build the site with your material and show it to you.</p></li>
-        <li class="step"><span class="step__n">04</span><h3 class="step__title" data-i18n="process.s4">Revisions</h3><p class="muted" data-i18n="process.d4">You ask for changes, within the revision rounds of your package.</p></li>
-        <li class="step"><span class="step__n">05</span><h3 class="step__title" data-i18n="process.s5">Launch</h3><p class="muted" data-i18n="process.d5">The site goes live on your domain, and the final payment we agreed on is due.</p></li>
+        <li class="step is-active"><span class="step__n">01</span><h3 class="step__title" data-i18n="process.s1">Talk</h3><p class="muted" data-i18n="process.d1">You tell us what the company does and what the client should do on the site.</p></li>
+        <li class="step"><span class="step__n">02</span><h3 class="step__title" data-i18n="process.s2">Material</h3><p class="muted" data-i18n="process.d2">You send photos, texts and contacts. If you want 3D, we agree on what to model. The timeline starts here.</p></li>
+        <li class="step"><span class="step__n">03</span><h3 class="step__title" data-i18n="process.s3">Build</h3><p class="muted" data-i18n="process.d3">We build the site and show it to you.</p></li>
+        <li class="step"><span class="step__n">04</span><h3 class="step__title" data-i18n="process.s4">Revisions</h3><p class="muted" data-i18n="process.d4">You ask for changes, within your package's rounds.</p></li>
+        <li class="step"><span class="step__n">05</span><h3 class="step__title" data-i18n="process.s5">Launch</h3><p class="muted" data-i18n="process.d5">The site goes live on your domain and you pay the rest.</p></li>
       </ol>
     </div>
   </div>
@@ -158,23 +202,25 @@
 
 <section class="section faq" id="faq" aria-labelledby="faq-title">
   <div class="container faq__grid">
-    <div><p class="overline" data-i18n="faq.label">FAQ</p><h2 class="t-3xl" id="faq-title" data-fx="reveal" data-i18n="faq.title">What every construction company asks</h2></div>
+    <div><p class="overline" data-i18n="faq.label">FAQ</p><h2 class="t-3xl" id="faq-title" data-fx="reveal" data-i18n="faq.title">What every business asks</h2></div>
     <div class="faq__list">
-      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.1.q">What do I need to send?</span></summary><p class="faq__a muted" data-i18n="faq.1.a">Photos of your projects (finished and ongoing if possible), a short text about the company, your Instagram handle, your WhatsApp number and your logo, if you have one.</p></details>
-      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.2.q">How long does it take?</span></summary><p class="faq__a muted" data-i18n="faq.2.a">The timeline is agreed in our conversation and starts counting when you send the complete material.</p></details>
+      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.1.q">What do I need to send?</span></summary><p class="faq__a muted" data-i18n="faq.1.a">Photos of your work or product, a short text about the company, Instagram handle, WhatsApp and logo.</p></details>
+      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.2.q">How long does it take?</span></summary><p class="faq__a muted" data-i18n="faq.2.a">Agreed in our conversation. The timeline starts when you send the complete material.</p></details>
       <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.3.q">How does payment work?</span></summary><p class="faq__a muted" data-i18n="faq.3.a">50% at the start and 50% when the site goes live.</p></details>
-      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.4.q">Is the domain in my name?</span></summary><p class="faq__a muted" data-i18n="faq.4.a">Yes. The site address is registered in your name.</p></details>
-      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.5.q">What if I want to change something?</span></summary><p class="faq__a muted" data-i18n="faq.5.a">Each package has revision rounds: 1 on Essential and 2 on Builder. Corporate is agreed in our conversation.</p></details>
-      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.6.q">Do you run ads?</span></summary><p class="faq__a muted" data-i18n="faq.6.a">No. FARLO builds the site. It comes with space prepared for measurement, and the setup is done by whoever handles your traffic.</p></details>
+      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.4.q">Is the domain in my name?</span></summary><p class="faq__a muted" data-i18n="faq.4.a">Yes. The address is registered in your name.</p></details>
+      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.5.q">What if I want to change something?</span></summary><p class="faq__a muted" data-i18n="faq.5.a">Each package has revision rounds: 1 on Essential and 2 on Complete. Corporate is agreed.</p></details>
+      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.6.q">Do you run ads?</span></summary><p class="faq__a muted" data-i18n="faq.6.a">No. FARLO builds the site, ready for measurement. Setup is done by whoever handles your traffic.</p></details>
+      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.7.q">Does 3D make the site heavy?</span></summary><p class="faq__a muted" data-i18n="faq.7.a">No. The model only loads when the client asks for it and is optimized to open fast.</p></details>
+      <details class="faq__item"><summary class="faq__q"><span data-i18n="faq.8.q">Do I need a 3D model ready?</span></summary><p class="faq__a muted" data-i18n="faq.8.a">No. We agree on what to model in our conversation. Cost and timeline vary.</p></details>
     </div>
   </div>
 </section>
 
 <section class="section cta" id="cta" aria-labelledby="cta-title">
   <div class="container cta__inner">
-    <h2 class="display cta__title" id="cta-title" data-fx="reveal" data-i18n="cta.title">Ready to put your company online?</h2>
-    <p class="t-lg cta__text" data-i18n="cta.text">Message us on WhatsApp, tell us how the company works and we'll talk about your site.</p>
-    <div class="cta__actions"><a class="btn btn--wa btn--lg" href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20construction%20company." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria" data-fx="magnetic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="wa.label">WhatsApp</span></a></div>
+    <h2 class="display cta__title" id="cta-title" data-fx="reveal" data-i18n="cta.title">Ready to put your business online?</h2>
+    <p class="t-lg cta__text" data-i18n="cta.text">Message us on WhatsApp, tell us what the company does and we'll build your site.</p>
+    <div class="cta__actions"><a class="btn btn--wa btn--lg" href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria" data-fx="magnetic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.1 8c.2 2.9 3.6 6.3 6.6 6.6l1.3-1.5-2.4-1.2-1 .9c-1.1-.5-1.9-1.3-2.4-2.4l.9-1L10.9 7 9.1 8Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="wa.label">WhatsApp</span></a></div>
   </div>
 </section>
 </main>
@@ -183,7 +229,9 @@
     <div><p class="site-footer__mark">FARLO</p><p class="site-footer__made"><span data-i18n="footer.made">Built with method by FARLO</span> · 2026</p></div>
     <nav aria-label="Footer" data-i18n-attr="aria-label:footer.nav"><ul class="site-footer__list"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li><a href="packages.html" data-i18n="nav.packages">Packages</a></li><li><a href="contact.html" data-i18n="nav.contact">Contact</a></li></ul></nav>
     <div><p class="overline" data-i18n="footer.contacts">Contacts</p><ul class="site-footer__list">
-      <li><a href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20construction%20company." data-wa target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      <li><a href="https://wa.me/PH_NUMERO_WHATSAPP?text=Hi!%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." data-wa target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      <li><a href="https://www.instagram.com/farlo.online/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="mailto:farloconstrutora@gmail.com">E-mail</a></li>
       </ul></div>
     <div class="lang lang--footer" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.aria"><a class="lang__link" lang="pt-BR" hreflang="pt-BR" href="../index.html" data-lang-switch="pt" aria-label="Português">PT</a><a class="lang__link" lang="en" hreflang="en" href="index.html" data-lang-switch="en" aria-label="English" aria-current="true">EN</a></div>
   </div>
