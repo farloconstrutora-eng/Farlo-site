@@ -31,7 +31,9 @@
 .chip3d:hover { color: var(--text); border-color: var(--faint); }
 .chip3d[aria-pressed="true"] { color: var(--on-accent); background: var(--lime); border-color: var(--lime); }
 .chip3d:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.hero__hint { position: absolute; left: 50%; bottom: 3.4rem; transform: translateX(-50%); margin: 0; font-size: var(--fs-2xs); letter-spacing: var(--tracking-overline); text-transform: uppercase; color: var(--faint); pointer-events: none; white-space: nowrap; }
+.hero__cap { position: absolute; left: 0; right: 0; top: .25rem; margin: 0; text-align: center; font-size: .8125rem; color: var(--muted); pointer-events: none; }
+.hero__stage:not(.is-live) .hero__cap { visibility: hidden; }
+.hero__hint { position: absolute; left: 50%; top: 1.7rem; transform: translateX(-50%); margin: 0; font-size: var(--fs-2xs); letter-spacing: var(--tracking-overline); text-transform: uppercase; color: var(--faint); pointer-events: none; white-space: nowrap; }
 @media (min-width: 60rem) {
   .hero--3d .hero__grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 3rem; }
   .hero--3d .hero__title { max-width: 17ch; }

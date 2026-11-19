@@ -1,0 +1,67 @@
+{
+ "island_tree_02": {
+  "file": "island_tree_02.glb",
+  "tris": 17469,
+  "height": 3.733,
+  "materials": {
+   "island_tree_02": {
+    "map": "island_tree_02__island_tree_02_diff.jpg",
+    "alphaMap": null
+   },
+   "island_tree_02_leaves": {
+    "map": "island_tree_02__island_tree_02_leaves_diff.jpg",
+    "alphaMap": "island_tree_02__island_tree_02_leaves_alpha.jpg"
+   },
+   "island_tree_02_branches": {
+    "map": "island_tree_02__island_tree_02_branches_diff.jpg",
+    "alphaMap": null,
+    "uvScale": [
+     15,
+     3.4
+    ],
+    "uvOffset": [
+     0,
+     -2.4
+    ]
+   }
+  }
+ },
+ "tree_small_02": {
+  "file": "tree_small_02.glb",
+  "tris": 17027,
+  "height": 5.379,
+  "materials": {
+   "tree_small_02_branches": {
+    "map": "tree_small_02__tree_small_02_branches_diff.jpg",
+    "alphaMap": null,
+    "uvScale": [
+     3,
+     0.6
+    ],
+    "uvOffset": [
+     0,
+     0.4
+    ]
+   },
+   "tree_small_02_leaves": {
+    "map": "tree_small_02__tree_small_02_leaves_diff.jpg",
+    "alphaMap": "tree_small_02__tree_small_02_leaves_alpha.jpg"
+   },
+   "tree_small_02_trunk": {
+    "map": "tree_small_02__tree_small_02_trunk_diff.jpg",
+    "alphaMap": null
+   }
+  }
+ },
+ "fern_02": {
+  "file": "fern_02.glb",
+  "tris": 1869,
+  "height": 0.428,
+  "materials": {
+   "fern_02": {
+    "map": "fern_02__fern_02_diff.jpg",
+    "alphaMap": "fern_02__fern_02_alpha.jpg"
+   }
+  }
+ }
+}

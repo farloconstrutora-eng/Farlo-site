@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; media-src 'self'; connect-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Residência Modelo 3D — protótipo FARLO</title>
-<meta name="description" content="Protótipo de residência 3D interativa para sites de construtoras: explore os pavimentos, o entorno e troque os acabamentos.">
+<title>Residência 3D interativa — demonstração FARLO</title>
+<meta name="description" content="Explore uma casa em 3D pelo navegador: gire, entre nos pavimentos, veja de dia e de noite e troque os acabamentos. Demonstração da FARLO.">
 <meta name="theme-color" content="#101316">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
@@ -13,22 +13,28 @@
 <body>
 <header class="top">
   <a class="top__home" href="../index.html" aria-label="FARLO, voltar ao site"><img class="top__logo" src="logo.svg" width="145" height="30" alt="FARLO"></a>
-  <a class="top__back" href="../index.html#residencia">← Voltar ao site</a><span class="badge">Protótipo · modelo de demonstração</span>
+  <a class="top__back" href="../index.html#residencia">← Voltar ao site</a><span class="badge">Demonstração FARLO</span>
 </header>
 
 <div class="layout">
   <main class="stage" id="stage">
     <canvas id="c" tabindex="0" aria-label="Modelo 3D de uma residência. Arraste para girar, role ou pince para aproximar, use as setas do teclado para girar."></canvas>
     <p class="hint" id="hint">Arraste para girar · role para aproximar</p>
-    <div class="loading" id="loading">Montando a residência…</div>
+    <div class="loading" id="loading" role="status" aria-live="polite">
+      <div class="loading__box">
+        <p class="loading__text">Carregando a residência…</p>
+        <div class="loading__bar" aria-hidden="true"><span class="loading__fill" id="loadfill"></span></div>
+        <p class="loading__pct" id="loadpct">0%</p>
+      </div>
+    </div>
     <div class="nowebgl" id="nowebgl" hidden>
       <p><strong>Seu navegador não abriu o 3D.</strong></p>
-      <p>Neste caso o site mostraria fotos e plantas da casa no lugar do modelo.</p>
+      <p>Nesse caso, o site mostra fotos no lugar do modelo.</p>
     </div>
   </main>
 
   <aside class="panel" aria-label="Controles da casa">
-    <h1 class="panel__title">Residência Modelo</h1>
+    <h1 class="panel__title">Residência de demonstração</h1>
     <p class="panel__specs">≈ 230 m² · 2 pavimentos · 2 suítes · piscina e garagem</p>
 
     <section class="group" aria-labelledby="g-view">
@@ -69,9 +75,8 @@
       <div class="chips" data-group="floor" role="group" aria-labelledby="g-floor"></div>
     </section>
 
-    <a class="cta" id="cta" href="https://wa.me/?text=" target="_blank" rel="noopener noreferrer">Tenho interesse nesta residência</a>
-    <p class="note" id="note">Protótipo de teste de peso e desempenho. Medidas, planta e acabamentos são ilustrativos.</p>
-    <p class="stats" id="stats" aria-live="off"></p>
+    <a class="cta" id="cta" href="../contato.html">Quero um 3D assim no meu site</a>
+    <p class="note" id="note">Casa ilustrativa, criada pela FARLO para demonstrar o 3D. No seu site, entra o seu produto, ambiente ou imóvel.</p>
   </aside>
 </div>
 

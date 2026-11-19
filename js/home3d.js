@@ -1,4 +1,4 @@
-/* FARLO — js/home3d.js: 3D do hero (three.js + modelos .glb carregados sob demanda) e demo da residência embutida.
+/* FARLO — js/home3d.js: 3D do topo da home (three.js + modelos .glb feitos no Blender, carregados sob demanda) e demo da residência embutida.
    Sem WebGL, sem JS ou com falha de carga, o hero mostra a logo e a demo abre em tela cheia. */
 (function () {
   "use strict";
@@ -81,12 +81,6 @@
 
     function srgb(hex) { return new THREE.Color(hex).convertSRGBToLinear(); }
     var AMBER = srgb(0xffb400);
-    var texLoader = new THREE.TextureLoader();
-    function tex(name, rep) {
-      var t = texLoader.load(base + "residencia-3d/assets/tex/" + name, function () { request(); });
-      t.encoding = THREE.sRGBEncoding; t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(rep, rep);
-      t.anisotropy = 4; return t;
-    }
     function std(o) { return new THREE.MeshStandardMaterial(o); }
 
     function plinth(g, top) {
@@ -111,62 +105,44 @@
       if (!cache[path]) cache[path] = new Promise(function (res, rej) { gl.load(base + path + ".glb", function (g) { res(g.scene); }, undefined, rej); });
       return cache[path].then(function (s) { return s.clone(true); });
     }
-    function box(g, w, h, d, x, y, z, mat) {
-      var m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), mat); m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; g.add(m); return m;
+
+    /* Os três modelos foram feitos no Blender pela FARLO e chegam como .glb, um por vez, só quando o visitante escolhe. */
+    function stand(g, r, h, color) {
+      var p = new THREE.Mesh(new THREE.CylinderGeometry(r, r, h, 64), std({ color: srgb(color), roughness: 0.3, metalness: 0.45 }));
+      p.position.y = h / 2; p.castShadow = p.receiveShadow = true; g.add(p);
     }
 
-    /* ---- 1) imóvel: casa com materiais reais, piscina, deck e árvore ---- */
+    /* ---- 1) imóvel: casa de demonstração ---- */
     function buildHouse() {
-      var g = new THREE.Group();
-      plinth(g, std({ map: tex("grass_diff.jpg", 5), color: srgb(0x86b05a), roughness: 1 }));
-      var plaster = std({ map: tex("plaster_diff.jpg", 1.5), roughness: 0.85 });
-      var wood = std({ map: tex("wood_diff.jpg", 1.2), roughness: 0.7 });
-      var conc = std({ map: tex("concrete_diff.jpg", 1.5), roughness: 0.8 });
-      var deck = std({ map: tex("deck_diff.jpg", 1.6), roughness: 0.75 });
-      var glass = std({ color: srgb(0x2c4a5c), roughness: 0.08, metalness: 0.7 });
-      var water = std({ color: srgb(0x2fa9c4), roughness: 0.06, metalness: 0.1, emissive: srgb(0x063a46) });
-      box(g, 2.9, 0.95, 1.9, -0.2, 0.475, 0, plaster);
-      box(g, 1.9, 0.85, 1.5, 0.3, 1.375, -0.05, wood);
-      box(g, 3.2, 0.12, 2.2, -0.2, 0.99, 0, conc);
-      box(g, 2.2, 0.12, 1.8, 0.3, 1.86, -0.05, conc);
-      box(g, 1.1, 0.55, 0.04, -0.85, 0.5, 0.96, glass);
-      box(g, 1.2, 0.45, 0.04, 0.45, 1.35, 0.72, glass);
-      box(g, 0.5, 0.75, 0.04, 0.6, 0.4, 0.96, wood);
-      box(g, 1.7, 0.05, 1.0, -0.6, 0.025, 1.65, deck);
-      box(g, 1.2, 0.04, 0.7, -0.6, 0.045, 1.65, water);
-      box(g, 0.9, 0.95, 1.9, 1.7, 0.475, 0, conc);
-      return model("residencia-3d/assets/models/tree_small_02").then(function (t) {
-        fit(t, 2.4, -2.0, -1.2); shadows(t); g.add(t); return g;
-      }, function () { return g; });
-    }
-
-    /* ---- 2) produto: câmera fotográfica ---- */
-    function buildProduct() {
       var g = new THREE.Group(); plinth(g);
-      var pd = new THREE.Mesh(new THREE.CylinderGeometry(1.5, 1.5, 0.25, 64), std({ color: srgb(0x3a444c), roughness: 0.25, metalness: 0.5 }));
-      pd.position.y = 0.125; pd.castShadow = pd.receiveShadow = true; g.add(pd);
-      return model("assets/models/Camera_01").then(function (m) {
-        fit(m, 3.3, 0, 0, 0.5); shadows(m); m.position.y += 0.25; g.add(m); return g;
+      return model("assets/models/farlo-casa-hero").then(function (m) {
+        fit(m, 5.3, 0, 0, 0); shadows(m); g.add(m); return g;
       });
     }
 
-    /* ---- 3) ambiente: sala com sofá, poltrona, mesa e planta ---- */
+    /* ---- 2) produto: sacola FAWÉ ---- */
+    function buildProduct() {
+      var g = new THREE.Group(); plinth(g);
+      stand(g, 1.35, 0.22, 0x3a444c);
+      return model("assets/models/fawe-tote").then(function (m) {
+        fit(m, 3.9, 0, 0, -0.35); shadows(m); m.position.y += 0.22; g.add(m); return g;
+      });
+    }
+
+    /* ---- 3) ambiente: sala de demonstração ---- */
     function buildSpace() {
-      var g = new THREE.Group(); plinth(g, std({ map: tex("floorWood_diff.jpg", 3), roughness: 0.6 }));
-      var rug = new THREE.Mesh(new THREE.CylinderGeometry(1.7, 1.7, 0.02, 64), std({ color: srgb(0x8d8a84), roughness: 1 }));
-      rug.position.y = 0.012; rug.receiveShadow = true; g.add(rug);
-      return Promise.all([model("assets/models/sofa_02"), model("assets/models/modern_arm_chair_01"), model("assets/models/round_wooden_table_01"), model("assets/models/potted_plant_02")]).then(function (a) {
-        fit(a[0], 2.5, 0, -0.9, 0); fit(a[1], 1.15, 1.5, 0.35, -2.2); fit(a[2], 0.75, -0.2, 0.55, 0); fit(a[3], 1.3, -1.8, -0.9, 0.3);
-        a.forEach(function (o) { shadows(o); g.add(o); }); return g;
+      var g = new THREE.Group(); plinth(g);
+      return model("assets/models/farlo-ambiente").then(function (m) {
+        fit(m, 5.5, 0, 0, -1.0); shadows(m); g.add(m); return g;
       });
     }
 
     var builders = { house: buildHouse, product: buildProduct, space: buildSpace };
-    var shapes = {}, st = {}, cur = "house", loading = {};
+    var shapes = {}, st = {}, cur = "product", loading = {};
     function ensure(k) {
       if (shapes[k]) return Promise.resolve();
       if (!loading[k]) loading[k] = builders[k]().then(function (g) {
-        g.position.y = k === "house" ? -0.9 : -1.0; g.visible = false; scene.add(g); shapes[k] = g; st[k] = { s: 0, t: 0 };
+        g.position.y = -1.0; g.visible = false; scene.add(g); shapes[k] = g; st[k] = { s: 0, t: 0 };
       }, function (e) { console.warn("[hero3d]", k, e); delete loading[k]; });
       return loading[k];
     }
@@ -197,9 +173,9 @@
     function request() { if (!raf && visible && !document.hidden) raf = requestAnimationFrame(frame); }
 
     /* só mostra o 3D quando o primeiro modelo estiver pronto */
-    ensure("house").then(function () {
-      if (!shapes.house) return;
-      st.house.t = 1; st.house.s = 1; shapes.house.visible = true;
+    ensure("product").then(function () {
+      if (!shapes.product) return;
+      st.product.t = 1; st.product.s = 1; shapes.product.visible = true;
       stage.classList.add("is-live"); size(); request();
     });
     if (window.ResizeObserver) new ResizeObserver(function () { size(); request(); }).observe(stage); else window.addEventListener("resize", function () { size(); request(); });
@@ -221,10 +197,12 @@
     });
 
     var chips = Array.prototype.slice.call(stage.querySelectorAll("[data-shape]"));
+    var cap = stage.querySelector("[data-hero-cap]");
     chips.forEach(function (c) {
       c.addEventListener("click", function () {
         var k = c.getAttribute("data-shape"); if (k === cur) return;
         chips.forEach(function (o) { o.setAttribute("aria-pressed", String(o === c)); });
+        if (cap && c.getAttribute("data-cap")) cap.textContent = c.getAttribute("data-cap");
         c.setAttribute("aria-busy", "true"); var prev = cur; cur = k;
         ensure(k).then(function () {
           c.removeAttribute("aria-busy");

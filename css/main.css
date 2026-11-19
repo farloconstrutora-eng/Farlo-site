@@ -616,3 +616,19 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .homeauto__list { margin-top: 2rem; }
 @media (min-width: 60rem) { .crm { grid-template-columns: 1fr 1fr; gap: 3rem; padding: 2.5rem; align-items: center; } }
 @media (min-width: 48rem) { .homeauto__list { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---------- reformulação 19/11: portfólio e canais de contato ---------- */
+.works { padding-top: 2rem; }
+.works__list { display: grid; gap: 1.5rem; }
+@media (min-width: 48rem) { .works__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.work-card { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.work-card__media { aspect-ratio: 4 / 3; background: var(--c-950); overflow: hidden; }
+.work-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--t-base) var(--ease-expo-out); }
+@media (hover: hover) { .work-card:hover .work-card__media img { transform: scale(1.03); } }
+.work-card__body { display: grid; gap: .75rem; padding: 1.5rem; align-content: start; flex: 1; }
+.work-card__title { font-size: var(--fs-xl); line-height: var(--lh-xl); font-weight: 600; letter-spacing: -.01em; margin: 0; }
+.work-card__foot { margin-top: .5rem; }
+.contact-channels__list { display: grid; gap: 1rem; margin-top: 1rem; }
+.contact-channels__list li { display: grid; gap: .15rem; }
+.contact-channels__list a { font-size: var(--fs-lg); font-weight: 500; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: .25em; overflow-wrap: anywhere; }
+.contact-channels__list a:hover { color: var(--lime); text-decoration-color: currentColor; }
