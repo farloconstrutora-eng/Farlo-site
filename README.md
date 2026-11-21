@@ -10,7 +10,7 @@ Site institucional da FARLO (sites com 3D e automações), publicado com GitHub 
 
 ## WhatsApp
 
-Enquanto `whatsapp` em `js/content.js` não for um número (só dígitos: 55 + DDD + número), os botões levam ao Instagram e o formulário de contato abre o e-mail. Depois de preencher o número, os botões passam a abrir o WhatsApp.
+O número do WhatsApp fica em `config.whatsapp` de `js/content.js` (só dígitos: 55 + DDD + número). Sem número válido, os botões voltam a levar ao Instagram e o formulário abre o e-mail.
 
 ## Créditos dos modelos 3D
 
