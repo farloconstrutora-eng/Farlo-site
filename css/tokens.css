@@ -15,6 +15,7 @@
   --lime-strong: #ffc933;
   --cyan: #ff7a1a;           /* neons: luz e ênfase */
   --magenta: #c9d1d6;
+  --danger: #ff6b6b;          /* avisos de campo obrigatório */
   --violet: #7d8b96;
   --border: rgb(255 255 255 / .10);
   --overlay-label: color-mix(in srgb, var(--c-900) 65%, transparent);

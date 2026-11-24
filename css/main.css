@@ -653,3 +653,7 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .orc__send { display: grid; gap: .75rem; justify-items: start; padding-left: 3.25rem; }
 .orc__note { margin: 0; font-size: .875rem; }
 @media (prefers-reduced-motion: reduce) { .orc__step { transition: none; } }
+.orc__req { margin-left: .35rem; color: var(--danger, #ff6b6b); font-size: .8125rem; font-weight: 500; white-space: nowrap; }
+.orc__falta { margin: 0; padding-left: 3.25rem; color: var(--danger, #ff6b6b); font-size: .9375rem; }
+.orc .field__err { color: var(--danger, #ff6b6b); }
+.orc [aria-invalid="true"], .orc__opts.is-invalid label { border-color: var(--danger, #ff6b6b); }
