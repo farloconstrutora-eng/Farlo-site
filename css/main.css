@@ -632,3 +632,24 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .contact-channels__list li { display: grid; gap: .15rem; }
 .contact-channels__list a { font-size: var(--fs-lg); font-weight: 500; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: .25em; overflow-wrap: anywhere; }
 .contact-channels__list a:hover { color: var(--lime); text-decoration-color: currentColor; }
+
+/* ---------- Monte seu orçamento (js/orcamento.js) ---------- */
+.orc { display: grid; gap: 1.75rem; }
+.orc__step { display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: 0 1rem; margin: 0; padding: 0; border: 0; min-width: 0; transition: opacity .45s ease, transform .45s ease; }
+.orc__step > :not(legend) { grid-column: 2; }
+.orc__step > * + :not(legend) { margin-top: 1.25rem; }
+.orc__num { float: left; grid-column: 1; grid-row: 1 / span 3; padding: 0; }
+.orc__num span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; border: 1px solid var(--lime); color: var(--lime); font-weight: 600; }
+.orc__step.is-entering { opacity: 0; transform: translateY(.75rem); }
+.orc__group { margin: 0; padding: 0; border: 0; min-width: 0; display: grid; gap: .6rem; }
+.orc__group > legend { font-size: .9375rem; font-weight: 500; padding: 0; margin-bottom: .6rem; }
+.orc__opts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.orc__opts input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.orc__opts label { display: inline-block; padding: .6rem 1rem; border: 1px solid var(--faint); border-radius: 999px; background: var(--c-800); cursor: pointer; font-size: .9375rem; }
+.orc__opts input:checked + label { border-color: var(--lime); color: var(--lime); }
+.orc__opts input:focus-visible + label { outline: 2px solid var(--focus, var(--lime)); outline-offset: 2px; }
+.orc__other { width: 100%; padding: .85rem 1rem; background: var(--c-800); color: var(--text); border: 1px solid var(--faint); border-radius: var(--radius); font: inherit; }
+.orc__other:focus-visible { border-color: var(--lime); }
+.orc__send { display: grid; gap: .75rem; justify-items: start; padding-left: 3.25rem; }
+.orc__note { margin: 0; font-size: .875rem; }
+@media (prefers-reduced-motion: reduce) { .orc__step { transition: none; } }
