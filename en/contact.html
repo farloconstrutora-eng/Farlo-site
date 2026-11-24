@@ -44,7 +44,8 @@
 <script defer src="../js/fx/progress.js"></script>
 <script defer src="../js/fx/split.js"></script>
 <script defer src="../js/main.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact | FARLO","description":"Reach FARLO on WhatsApp at +55 62 99261-7854 or at contato@farlo.online and tell us what your business does.","inLanguage":"en","about":{"@type":"ProfessionalService","name":"FARLO","url":"https://farlo.online/","email":"contato@farlo.online","telephone":"+55-62-99261-7854","image":"https://farlo.online/assets/img/og/og-farlo.jpg","sameAs":["https://www.instagram.com/farlo.online/"]}}</script>
+<script defer src="../js/orcamento.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact | FARLO","description":"Reach FARLO on WhatsApp at +55 62 99261-7854 or at contato@farlo.online and tell us what your business does.","inLanguage":"en","about":{"@type":"ProfessionalService","name":"FARLO","url":"https://farlo.online/","email":"contato@farlo.online","telephone":"+55-62-99261-7854","image":"https://farlo.online/assets/img/og/og-farlo.jpg","sameAs":["https://www.instagram.com/matheus.farlo/"]}}</script>
 </head>
 <body data-page="contact" data-lang="en" data-root="../">
 <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -77,23 +78,31 @@
 <section class="section contact-wa" aria-label="WhatsApp">
   <div class="container contact-wa__grid">
     <div><a class="btn btn--wa btn--xl" href="https://wa.me/5562992617854?text=Hi%21%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." data-wa target="_blank" rel="noopener noreferrer" aria-label="Talk to FARLO on WhatsApp (opens in a new tab)" data-i18n-attr="aria-label:wa.aria" data-fx="magnetic"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.6a8.4 8.4 0 0 0-7.2 12.7L3.7 20.4l4.2-1.1A8.4 8.4 0 1 0 12 3.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 8.2c.2-.4.5-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .5-.1.6l-.5.6c.4.9 1.3 1.8 2.2 2.2l.6-.5c.2-.1.4-.2.6-.1l1.5.6c.3.1.4.3.4.5v.5c0 .2 0 .5-.4.7-.5.3-1.2.4-1.9.2-2.1-.6-3.8-2.3-4.4-4.4-.2-.7-.1-1.4.2-1.9Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="contact.wa.cta">Message on WhatsApp</span></a></div>
-    <div class="contact-channels"><h2 class="overline" data-i18n="contact.channels.title">Other channels</h2><ul class="contact-channels__list" role="list"><li><span class="muted" data-i18n="contact.channels.whatsapp">WhatsApp</span><a href="https://wa.me/5562992617854?text=Hi%21%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">+55 62 99261-7854</a></li><li><span class="muted" data-i18n="contact.channels.email">E-mail</span><a href="mailto:contato@farlo.online">contato@farlo.online</a></li><li><span class="muted" data-i18n="contact.channels.instagram">Instagram</span><a href="https://www.instagram.com/farlo.online/" target="_blank" rel="noopener noreferrer">@farlo.online</a></li></ul></div>
+    <div class="contact-channels"><h2 class="overline" data-i18n="contact.channels.title">Other channels</h2><ul class="contact-channels__list" role="list"><li><span class="muted" data-i18n="contact.channels.whatsapp">WhatsApp</span><a href="https://wa.me/5562992617854?text=Hi%21%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer">+55 62 99261-7854</a></li><li><span class="muted" data-i18n="contact.channels.email">E-mail</span><a href="mailto:contato@farlo.online">contato@farlo.online</a></li><li><span class="muted" data-i18n="contact.channels.instagram">Instagram</span><a href="https://www.instagram.com/matheus.farlo/" target="_blank" rel="noopener noreferrer">@matheus.farlo</a></li></ul></div>
   </div>
 </section>
 
 <section class="section contact-form js-only" aria-labelledby="form-title">
   <div class="container contact-form__grid">
-    <div><h2 class="t-2xl" id="form-title" data-i18n="contact.form.title">Draft your message</h2><p class="muted" data-i18n="contact.form.intro">Fill it in and see the preview. Nothing is sent by this form: the message only becomes the text of the e-mail button.</p></div>
-    <form class="msgform" novalidate data-msgform data-txt-msg="Hi! I'm {name}, from {company}. I want a website and I need: {need}" data-txt-err="Please fill in this field.">
-      <div class="field"><label for="f-name" data-i18n="contact.form.name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><p class="field__err" id="e-name" hidden data-i18n="contact.form.err">Please fill in this field.</p></div>
-      <div class="field"><label for="f-company" data-i18n="contact.form.company">Company or brand</label><input id="f-company" name="company" type="text" autocomplete="organization" required aria-describedby="e-company"><p class="field__err" id="e-company" hidden data-i18n="contact.form.err">Please fill in this field.</p></div>
-      <div class="field"><label for="f-need" data-i18n="contact.form.need">What you need</label><textarea id="f-need" name="need" rows="4" required aria-describedby="e-need"></textarea><p class="field__err" id="e-need" hidden data-i18n="contact.form.err">Please fill in this field.</p></div>
-      <button class="btn btn--ghost" type="submit" data-i18n="contact.form.submit">Build preview</button>
-      <div class="msgform__preview" data-preview hidden aria-live="polite">
-        <h3 class="panel__title" data-i18n="contact.form.preview.title">Message preview</h3>
-        <blockquote class="msg" data-preview-text></blockquote>
-        <p class="muted" data-i18n="contact.form.preview.note">Preview only. Nothing was sent. Use the button below to open your e-mail with this text.</p>
-        <a class="btn btn--wa" href="mailto:contato@farlo.online?subject=Contato%20pelo%20site%20FARLO" data-wa-custom target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.6a8.4 8.4 0 0 0-7.2 12.7L3.7 20.4l4.2-1.1A8.4 8.4 0 1 0 12 3.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 8.2c.2-.4.5-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .5-.1.6l-.5.6c.4.9 1.3 1.8 2.2 2.2l.6-.5c.2-.1.4-.2.6-.1l1.5.6c.3.1.4.3.4.5v.5c0 .2 0 .5-.4.7-.5.3-1.2.4-1.9.2-2.1-.6-3.8-2.3-4.4-4.4-.2-.7-.1-1.4.2-1.9Z" fill="currentColor"/></svg><span class="btn__text" data-i18n="contact.form.preview.cta">Send by e-mail with this text</span></a>
+    <div><h2 class="t-2xl" id="form-title">Get your quote</h2><p class="muted">Answer three quick questions. At the end, WhatsApp opens with the message ready for you to send.</p></div>
+    <form class="orc" novalidate data-orcamento>
+      <fieldset class="orc__step" data-step="1">
+        <legend class="orc__num"><span aria-hidden="true">1</span></legend>
+        <div class="field"><label for="o-name">Name</label><input id="o-name" name="name" type="text" autocomplete="name" required aria-describedby="oe-name"><p class="field__err" id="oe-name" hidden></p></div>
+        <fieldset class="orc__group" aria-describedby="oe-need"><legend>What you need</legend><ul class="orc__opts" role="list"><li><input type="checkbox" id="o-need-0" name="need" value="Website"><label for="o-need-0">Website</label></li><li><input type="checkbox" id="o-need-1" name="need" value="System"><label for="o-need-1">System</label></li><li><input type="checkbox" id="o-need-2" name="need" value="Automation"><label for="o-need-2">Automation</label></li></ul><p class="field__err" id="oe-need" hidden></p></fieldset>
+      </fieldset>
+      <fieldset class="orc__step" data-step="2" hidden>
+        <legend class="orc__num"><span aria-hidden="true">2</span></legend>
+        <div class="field"><label for="o-branch">Type of business</label><input id="o-branch" name="branch" type="text" autocomplete="organization-title" placeholder="E.g. clothing store, clinic, builder" required aria-describedby="oe-branch"><p class="field__err" id="oe-branch" hidden></p></div>
+      </fieldset>
+      <fieldset class="orc__step" data-step="3" hidden>
+        <legend class="orc__num"><span aria-hidden="true">3</span></legend>
+        <fieldset class="orc__group" aria-describedby="oe-found"><legend>How did you find FARLO</legend><ul class="orc__opts" role="list"><li><input type="radio" id="o-found-instagram" name="found" value="instagram"><label for="o-found-instagram">Instagram ad</label></li><li><input type="radio" id="o-found-recomendacao" name="found" value="recomendacao"><label for="o-found-recomendacao">Recommendation</label></li><li><input type="radio" id="o-found-google" name="found" value="google"><label for="o-found-google">Google search</label></li><li><input type="radio" id="o-found-site" name="found" value="site"><label for="o-found-site">A website made by FARLO</label></li><li><input type="radio" id="o-found-outro" name="found" value="outro"><label for="o-found-outro">Other</label></li></ul>
+          <input id="o-found-other" class="orc__other" name="found_other" type="text" placeholder="Tell us how (optional)" aria-label="Tell us how (optional)" hidden><p class="field__err" id="oe-found" hidden></p></fieldset>
+      </fieldset>
+      <div class="orc__send" hidden>
+        <button class="btn btn--wa btn--lg" type="submit" data-orc-send aria-label="Send the quote on WhatsApp (opens in a new tab)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.6a8.4 8.4 0 0 0-7.2 12.7L3.7 20.4l4.2-1.1A8.4 8.4 0 1 0 12 3.6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 8.2c.2-.4.5-.4.7-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .5-.1.6l-.5.6c.4.9 1.3 1.8 2.2 2.2l.6-.5c.2-.1.4-.2.6-.1l1.5.6c.3.1.4.3.4.5v.5c0 .2 0 .5-.4.7-.5.3-1.2.4-1.9.2-2.1-.6-3.8-2.3-4.4-4.4-.2-.7-.1-1.4.2-1.9Z" fill="currentColor"/></svg><span class="btn__text">Send on WhatsApp</span></button>
+        <p class="muted orc__note">Nothing is sent by the website: the message opens in your WhatsApp and you check it before sending.</p>
       </div>
     </form>
   </div>
@@ -106,7 +115,7 @@
     <nav aria-label="Footer" data-i18n-attr="aria-label:footer.nav"><ul class="site-footer__list"><li><a href="index.html" data-i18n="nav.home">Home</a></li><li><a href="packages.html" data-i18n="nav.packages">Packages</a></li><li><a href="portfolio.html" data-i18n="nav.work">Work</a></li><li><a href="contact.html" data-i18n="nav.contact">Contact</a></li></ul></nav>
     <div><p class="overline" data-i18n="footer.contacts">Contacts</p><ul class="site-footer__list">
       <li><a href="https://wa.me/5562992617854?text=Hi%21%20I%20found%20you%20through%20the%20FARLO%20website%20and%20I%20want%20a%20website%20for%20my%20business." data-wa target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/farlo.online/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      <li><a href="https://www.instagram.com/matheus.farlo/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
       <li><a href="mailto:contato@farlo.online">E-mail</a></li>
       </ul></div>
     <div class="lang lang--footer" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.aria"><a class="lang__link" lang="pt-BR" hreflang="pt-BR" href="../contato.html" data-lang-switch="pt" aria-label="Português">PT</a><a class="lang__link" lang="en" hreflang="en" href="contact.html" data-lang-switch="en" aria-label="English" aria-current="true">EN</a></div>
