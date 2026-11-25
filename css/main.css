@@ -611,6 +611,18 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .crm__flow li + li::before { content: "→"; margin-right: .6rem; color: var(--lime); font-weight: 400; }
 .crm__flow li:last-child { background: var(--lime); border-color: var(--lime); color: var(--on-accent); }
 .crm__flow li:last-child::before { color: var(--on-accent); }
+.offer { display: grid; gap: 2.5rem; padding: clamp(1.5rem, 1rem + 2.5vw, 3rem); border-top: 2px solid var(--lime); border-radius: 1.25rem; }
+@media (min-width: 56rem) { .offer { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; } .offer__extras { border-left: 1px solid var(--border); padding-left: 3.5rem; } }
+.offer__main, .offer__extras { display: grid; gap: 1.25rem; align-content: start; }
+.offer__title { font-size: var(--fs-lg); font-weight: 500; color: var(--muted); margin: 0; }
+.offer__price { font-size: var(--fs-3xl); margin-top: -.75rem; color: var(--lime); }
+.offer__lead { max-width: 30rem; }
+.offer__extras-title { font-size: var(--fs-xl); line-height: var(--lh-xl); font-weight: 600; margin: 0; }
+.offer__chips { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+.offer__chips li { padding: .5rem .95rem; border: 1px solid var(--border); border-radius: var(--radius-pill); background: var(--c-700); font-size: .9375rem; }
+.offer__note { color: var(--lime); font-size: .9375rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.offer__cta, .sys__cta .btn { justify-self: start; }
+.sys__cta { margin-top: 2rem; }
 .auto__small-title { margin-top: 3.5rem; }
 .auto__small-text { max-width: 36rem; margin-top: .5rem; }
 .automations .services__list { margin-top: 1.5rem; }
