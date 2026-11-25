@@ -74,7 +74,29 @@
     } else if (on) it.el.setAttribute("aria-invalid", "true"); else it.el.removeAttribute("aria-invalid");
   }
 
+  /* a caixa do formulário cresce e encolhe suave quando uma etapa, aviso ou campo aparece */
+  function animateHeight(h0) {
+    if (reduce || !form.animate) return;
+    var h1 = form.offsetHeight;
+    if (Math.abs(h1 - h0) < 2) return;
+    if (form._anim) form._anim.cancel();
+    form.style.overflow = "hidden";
+    var a = form.animate([{ height: h0 + "px" }, { height: h1 + "px" }], { duration: 450, easing: "cubic-bezier(.16, 1, .3, 1)" });
+    form._anim = a;
+    a.onfinish = a.oncancel = function () {
+      if (form._anim !== a) return;
+      form.style.overflow = ""; form._anim = null;
+      if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+    };
+  }
+
   function update() {
+    var h0 = form.offsetHeight;
+    refresh();
+    animateHeight(h0);
+  }
+
+  function refresh() {
     /* abre a etapa seguinte quando a atual está completa; nunca fecha uma etapa já aberta */
     for (var i = 0; i < steps.length - 1; i++) { if (stepOk(i)) show(steps[i + 1]); else break; }
     var allOk = items.every(function (it) { return it.ok(); });
