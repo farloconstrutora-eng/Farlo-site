@@ -658,3 +658,5 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .orc__falta { margin: 0; padding-left: 3.25rem; color: var(--danger, #ff6b6b); font-size: .9375rem; }
 .orc .field__err { color: var(--danger, #ff6b6b); }
 .orc [aria-invalid="true"], .orc__opts.is-invalid label { border-color: var(--danger, #ff6b6b); }
+.orc { position: relative; padding: clamp(1.5rem, 1rem + 2vw, 2.75rem); background: color-mix(in srgb, var(--c-900) 82%, transparent); border: 1px solid color-mix(in srgb, var(--lime) 35%, transparent); border-radius: 1.25rem; box-shadow: 0 2rem 4rem -1.5rem rgb(0 0 0 / .55), 0 0 4rem -1rem color-mix(in srgb, var(--lime) 18%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.orc::before { content: ""; position: absolute; inset: -1px -1px auto; height: 3px; border-radius: 1.25rem 1.25rem 0 0; background: linear-gradient(90deg, transparent, var(--lime), transparent); }
