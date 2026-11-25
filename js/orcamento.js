@@ -60,9 +60,13 @@
   ];
   function stepOk(i) { return items.every(function (it) { return it.step !== i || it.ok(); }); }
 
+  /* com GSAP e sem movimento reduzido, a animação fica com js/fx/orcamento-fx.js (FX.orc) */
+  function fx() { var o = window.FX && window.FX.orc; return !reduce && o && o.ready() ? o : null; }
+
   function show(el) {
     if (!el.hidden) return;
     el.hidden = false;
+    if (fx()) return;
     if (!reduce) { el.classList.add("is-entering"); requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.remove("is-entering"); }); }); }
   }
 
@@ -91,6 +95,14 @@
   }
 
   function update() {
+    var f = fx();
+    if (f) {
+      f.before();
+      refresh();
+      var done = steps.map(function (s, i) { return stepOk(i); });
+      f.after({ done: done, progress: items.filter(function (it) { return it.ok(); }).length / items.length });
+      return;
+    }
     var h0 = form.offsetHeight;
     refresh();
     animateHeight(h0);
