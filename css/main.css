@@ -666,7 +666,7 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .orc__opts label { display: inline-block; padding: .6rem 1rem; border: 1px solid var(--faint); border-radius: 999px; background: var(--c-800); cursor: pointer; font-size: .9375rem; }
 .orc__opts input:checked + label { border-color: var(--lime); color: var(--lime); }
 .orc__opts input:focus-visible + label { outline: 2px solid var(--focus, var(--lime)); outline-offset: 2px; }
-.orc__other { width: 100%; padding: .85rem 1rem; background: var(--c-800); color: var(--text); border: 1px solid var(--faint); border-radius: var(--radius); font: inherit; }
+.orc__other { box-sizing: border-box; width: 100%; max-width: 100%; padding: .85rem 1rem; background: var(--c-800); color: var(--text); border: 1px solid var(--faint); border-radius: var(--radius); font: inherit; }
 .orc__other:focus-visible { border-color: var(--lime); }
 .orc__send { display: grid; gap: .75rem; justify-items: start; padding-left: 3.25rem; }
 .orc__note { margin: 0; font-size: .875rem; }
