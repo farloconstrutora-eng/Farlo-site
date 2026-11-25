@@ -426,6 +426,7 @@ main:focus { outline: none; }
 .cta--work { border-top: 0; }
 
 /* ---------- contato ---------- */
+body[data-page="contact"] { background: linear-gradient(to top, color-mix(in srgb, var(--lime) 50%, var(--c-900)) 0%, color-mix(in srgb, var(--lime) 22%, var(--c-900)) 35%, var(--c-900) 75%); }
 .contact-hero { padding-top: calc(var(--header-h) + 5rem); padding-bottom: 2rem; }
 .contact-hero__title { max-width: 14ch; }
 .contact-hero__lead { max-width: 36rem; margin-top: 1.5rem; }
