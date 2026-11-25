@@ -600,6 +600,11 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .page-nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.75rem; }
 .page-nav .chip3d { text-decoration: none; display: inline-flex; align-items: center; font: inherit; font-size: .85rem; font-weight: 600; color: var(--muted); background: var(--c-800); border: 1px solid var(--border); border-radius: var(--radius-pill); padding: .45rem 1rem; min-height: 2.25rem; }
 .page-nav .chip3d:hover { color: var(--lime); border-color: var(--lime); }
+.page-nav { gap: .75rem; }
+.page-nav .chip3d { gap: .5rem; font-size: .95rem; color: var(--lime); border-color: color-mix(in srgb, var(--lime) 60%, transparent); background: color-mix(in srgb, var(--lime) 8%, var(--c-800)); padding: .6rem 1.25rem; min-height: 2.75rem; cursor: pointer; transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease); }
+.page-nav .chip3d::after { content: "\2193"; font-weight: 700; transition: transform var(--t-fast) var(--ease); }
+.page-nav .chip3d:hover, .page-nav .chip3d:focus-visible { background: var(--lime); color: var(--on-accent); border-color: var(--lime); }
+.page-nav .chip3d:hover::after { transform: translateY(2px); }
 .packs-page > .container > h2 { margin-bottom: 1.5rem; }
 .automations { border-top: 1px solid var(--border); scroll-margin-top: var(--header-h); }
 #sites { scroll-margin-top: var(--header-h); }
