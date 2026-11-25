@@ -677,3 +677,47 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 .orc [aria-invalid="true"], .orc__opts.is-invalid label { border-color: var(--danger, #ff6b6b); }
 .orc { position: relative; padding: clamp(1.5rem, 1rem + 2vw, 2.75rem); background: color-mix(in srgb, var(--c-900) 82%, transparent); border: 1px solid color-mix(in srgb, var(--lime) 35%, transparent); border-radius: 1.25rem; box-shadow: 0 2rem 4rem -1.5rem rgb(0 0 0 / .55), 0 0 4rem -1rem color-mix(in srgb, var(--lime) 18%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .orc::before { content: ""; position: absolute; inset: -1px -1px auto; height: 3px; border-radius: 1.25rem 1.25rem 0 0; background: linear-gradient(90deg, transparent, var(--lime), transparent); }
+
+/* ---------- home v2 (25/11): portas, nichos, demonstrações, sistemas ---------- */
+.portas__list { display: grid; gap: 1rem; margin-top: 2.5rem; }
+.porta { position: relative; display: flex; flex-direction: column; gap: .5rem; border-top: 2px solid var(--lime); }
+.porta--sites { border-top-color: var(--cyan); }
+.porta--auto { border-top-color: var(--magenta); }
+.porta .niche__icon { margin-bottom: .75rem; }
+.porta__line { font-size: .8rem; font-weight: 600; letter-spacing: var(--tracking-overline); text-transform: uppercase; color: var(--lime); }
+.porta__title { font-size: var(--fs-xl); line-height: var(--lh-xl); font-weight: 600; letter-spacing: -.01em; }
+.porta__foot { margin-top: auto; padding-top: .75rem; }
+.porta__link { color: var(--lime); }
+.porta__link::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.porta__link:focus-visible { outline: none; }
+.porta:focus-within { outline: 2px solid var(--focus); outline-offset: 3px; }
+@media (min-width: 48rem) { .portas__list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; } }
+@media (min-width: 48rem) { .niches__list.niches__list--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 75rem) { .niches__list.niches__list--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.chip--soon { color: var(--cyan); }
+.demos__grid { display: grid; gap: 1.25rem; }
+.demos__item { min-width: 0; }
+.demos__tag { font-size: var(--fs-xl); line-height: var(--lh-xl); font-weight: 600; letter-spacing: -.01em; }
+.demos__text { max-width: 40rem; margin: .5rem 0 1.25rem; }
+.demo-sys { display: flex; flex-direction: column; gap: .75rem; border-top: 2px solid var(--cyan); }
+.demo-sys__top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .5rem; }
+.demo-sys__top .niche__icon, .sys-card__top .niche__icon { margin-bottom: 0; }
+.demo-sys__title { font-size: var(--fs-lg); line-height: var(--lh-lg); font-weight: 500; }
+.demo-sys__foot { margin-top: auto; padding-top: 1rem; }
+@media (min-width: 60rem) { .demos__grid { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 1.5rem; align-items: stretch; } }
+.problem__list .panel { display: flex; flex-direction: column; }
+.problem__foot { margin-top: auto; padding-top: 1rem; }
+.problem__link { color: var(--lime); }
+.sys-home { background: var(--c-950); border-block: 1px solid var(--border); }
+.sys-home__head { display: grid; gap: 1.25rem; }
+.sys-home__head .t-lg { max-width: 40rem; }
+.sys-home__list { display: grid; gap: 1rem; margin-top: 2.5rem; }
+.sys-card__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+.sys-card--soon { border: 1px dashed var(--faint); background: color-mix(in srgb, var(--c-800) 45%, transparent); }
+.sys-home__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 2rem; margin-top: 2rem; }
+.sys-home__note { max-width: 36rem; }
+@media (min-width: 48rem) { .sys-home__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 60rem) { .sys-home__head { grid-template-columns: 1fr 1fr; align-items: end; gap: 4rem; } }
+@media (min-width: 64rem) { .sys-home__list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; } }
+.process__times { display: grid; gap: .5rem; max-width: 48rem; padding: 1rem 1.25rem; border-left: 2px solid var(--lime); border-radius: var(--radius); background: var(--c-800); color: var(--muted); }
+.process__times li:first-child { color: var(--text); }
